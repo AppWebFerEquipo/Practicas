@@ -12,7 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 
-namespace ProyectoIMC
+namespace Resistencia
 {
     public class Startup
     {
@@ -30,7 +30,7 @@ namespace ProyectoIMC
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "ProyectoIMC", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Resistencia", Version = "v1" });
             });
         }
 
@@ -41,7 +41,7 @@ namespace ProyectoIMC
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ProyectoIMC v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Resistencia v1"));
             }
 
             app.UseHttpsRedirection();
